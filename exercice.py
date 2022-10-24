@@ -4,9 +4,11 @@
 from collections import deque
 
 
-def get_fibonacci_number(TODO):
-	pass
-
+def get_fibonacci_number(n):
+	#liste = [0,1]
+	#for i in range(2,n+1):
+	#	liste.append( liste[i-1]+liste[i-2] )
+	return [0 if n == 0 else 1 if n == 1 else get_fibonacci_number(i-1)+get_fibonacci_number(i-2) for i in range(2,n)][-1]
 def get_fibonacci_sequence(TODO):
 	pass
 
@@ -22,7 +24,7 @@ def build_recursive_sequence_generator(TODO):
 
 if __name__ == "__main__":
 	print([get_fibonacci_number(0), get_fibonacci_number(1), get_fibonacci_number(2)])
-	print([get_fibonacci_number(i) for i in range(10)])
+	print([get_fibonacci_number(i) for i in range(11)])
 	print()
 
 	print(get_fibonacci_sequence(1))
